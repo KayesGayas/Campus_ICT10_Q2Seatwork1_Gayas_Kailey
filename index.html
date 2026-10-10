@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title>Seatwork #1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px 15px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                135deg, #450000, #990000, #d71920
+            );
+            color: #333333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+            padding: 35px;
+            background: white;
+            border-radius: 18px;
+            border-top: 8px solid #ff2929;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff0f0;
+            border: 2px solid #b91c1c;
+            border-radius: 50%;
+            font-size: 38px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            text-align: center;
+            color: #8b0000;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            text-align: center;
+            color: #b91c1c;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            width: 65px;
+            height: 4px;
+            margin: 22px auto;
+            background: #d71920;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #7f0000;
+            font-size: 21px;
+        }
+
+        .description {
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            color: #7f0000;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #e5b4b4;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #b91c1c;
+            box-shadow: 0 0 6px #fecaca;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            background: #b91c1c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7f0000;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff1f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            color: #7f0000;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 7px;
+            color: #8b0000;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        footer span {
+            color: #888888;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">🏐</div>
+
+        <h1>VOLLEYBALL VARSITY</h1>
+        <p class="subtitle">CANDIDATE VERIFICATION SYSTEM</p>
+        <div class="divider"></div>
+
+        <h2>Verify Your Membership</h2>
+        <p class="description">
+            Enter your name to check if you are part of
+            the Volleyball Varsity team.
+        </p>
+
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name"
+            placeholder="Enter your first name">
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name"
+            placeholder="Enter your last name">
+
+        <button py-click="verify_candidate">VERIFY CANDIDATE</button>
+        <div id="result">Your verification result will appear here.</div>
+
+        <footer>
+            <p>VOLLEYBALL VARSITY</p>
+            <span>Made by Kailey Gayas</span>
+        </footer>
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
